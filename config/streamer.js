@@ -9,25 +9,11 @@ module.exports = {
     read_sleep: 0.2,
     domain: process.env.APP_NAME || '',
     listeners: {
-        "blog.streamer.event": [
+        "demo.streamer.event": [
             {
                 handle(message) {
 
                     console.log('>>> ', JSON.stringify(message.getData()))
-                }
-            },
-            {
-                handle(message) {
-
-                    console.log('2 >>> ', JSON.stringify(message.getData()))
-                }
-            }
-        ],
-        "blog2.streamer.event": [
-            {
-                handle(message) {
-
-                    console.log('blog2 >>> ', JSON.stringify(message.getData()))
                 }
             }
         ]
