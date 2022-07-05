@@ -73,7 +73,6 @@ export class Streamer extends EventEmitter implements Emitter, Listener {
             stream = new Streams(_streams);
             const result = await stream.add(message, id);
             return result.join(',');
-            return '';
         }else{
             stream = new Stream(event.name());
             return stream.add(message, id);

@@ -4,4 +4,5 @@ export interface StreamableMessage{
      */
 
     getContent(): Object;
+    setName(name: string): Object;
 }

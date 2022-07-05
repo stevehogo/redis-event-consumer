@@ -40,5 +40,7 @@ export abstract class StreamMessage implements StreamableMessage {
         const data: any = this.content;
         return data[key] || $default;
     }
-
+    public setName(name: string): StreamableMessage{
+        return this;
+    }
 }

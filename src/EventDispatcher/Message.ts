@@ -44,9 +44,22 @@ export class Message extends StreamMessage {
                 payload[key] = "" + payload[key];
             }
         }
-        // $this->content['type'].$this->content['name'].$this->content['domain'].$data;
         const input = `${payload['type']}${payload['name']}${payload['domain']}${payload['data']}`;
         payload['hash'] = crypto.createHash('sha256').update(input).digest('hex');
         this.content = payload;
+    }
+    /**
+     * set new stream name
+     * @param name 
+     * @returns Message
+     */
+    public setName(name: string): StreamMessage {
+        const data: any = this.content;
+        const payload = this.getContent();
+        payload['name'] = name;
+        const input = `${payload['type']}${payload['name']}${payload['domain']}${payload['data']}`;
+        payload['hash'] = crypto.createHash('sha256').update(input).digest('hex');
+        this.content = payload;
+        return this;
     }
 }
