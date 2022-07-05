@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('dotenv').config();
 require('../dist/lib/reset-color');
 const { ListenCommand } = require('../dist');

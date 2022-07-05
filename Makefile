@@ -6,3 +6,5 @@ emit:
 	npm run emit
 listen:
 	npm run listen streamer:listen blog.streamer.event -- --group=local_d --consumer=2
+publish:
+	npm publish --access public
