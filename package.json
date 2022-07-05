@@ -1,6 +1,6 @@
 {
   "name": "@steveho/redis-event-consumer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Nodejs event-consumer with redis streams. inspired from Laravel Streamer(@prwnr/laravel-streamer)",
   "main": "./dist/index.js",
   "bin": {

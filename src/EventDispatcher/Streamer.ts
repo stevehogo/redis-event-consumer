@@ -64,8 +64,10 @@ export class Streamer extends EventEmitter implements Emitter, Listener {
         };
         let stream;
         const message = new Message(meta, event.payload());        
-        const streams: Set<string> = event.streams();
-        if(streams.size > 1){
+        const streams: any = event.streams();
+        let size = (streams.size || streams.length);
+
+        if(size > 1){
             const _streams = new Set<string>();
             for(const key of streams.values()){
                 _streams.add(key);

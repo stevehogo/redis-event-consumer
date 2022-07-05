@@ -29,7 +29,7 @@ export class Streams extends RedisClient {
 
         for (const stream of this.streams.values()) {
             const _stream = new Stream(stream);
-            message.setName(stream);
+            // message.setName(stream);
             ids.push(await _stream.add(message, id));
         }
         return ids;
