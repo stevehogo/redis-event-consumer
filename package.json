@@ -1,13 +1,15 @@
 {
   "name": "@steveho/redis-event-consumer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodejs event-consumer with redis streams. inspired from Laravel Streamer(@prwnr/laravel-streamer)",
   "main": "./dist/index.js",
   "bin": {
     "listen": "./bin/listen.js"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "config/*",
+    ".env.sample"
   ],
   "scripts": {
     "watch": "tsc --watch --preserveWatchOutput --pretty",
