@@ -1,0 +1,22 @@
+version: "3.7"
+
+networks:
+  tripfusernw:
+     external:
+       name: tf-stack
+
+services:
+  demo-stream:
+    container_name: dj-demo-event
+    build:
+      context: ./
+      dockerfile: ./.docker/Dockerfile
+      args:
+        buildno: 1
+
+    environment:
+      REDIS_HOST: ${LOCAL_IP}
+      REDIS_PORT: 6378
+
+    volumes:
+      - ./:/app/www
