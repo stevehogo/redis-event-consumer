@@ -1,6 +1,6 @@
 {
   "name": "@steveho/redis-event-consumer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Nodejs event-consumer with redis streams. inspired from Laravel Streamer(@prwnr/laravel-streamer)",
   "main": "./dist/index.js",
   "bin": {
@@ -27,13 +27,13 @@
   "dependencies": {
     "@steveho/ts-config": "^1.0.2",
     "dayjs": "^1.11.3",
+    "dotenv": "^16.0.1",
     "redis": "^4.1.1",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.1",
-    "@types/yargs": "^17.0.10",
-    "dotenv": "^16.0.1",
+    "@types/yargs": "^17.0.10",    
     "nodemon": "^2.0.18",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4",
